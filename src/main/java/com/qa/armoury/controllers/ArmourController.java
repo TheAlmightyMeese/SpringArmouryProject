@@ -17,7 +17,7 @@ import com.qa.armoury.domain.Armour;
 import com.qa.armoury.service.ArmourService;
 
 @RestController
-@RequestMapping("/Armour")
+@RequestMapping("/armour")
 public class ArmourController {
 
 	private ArmourService service;

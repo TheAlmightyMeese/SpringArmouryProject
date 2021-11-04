@@ -1,22 +1,50 @@
 package com.qa.armoury.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Weapon {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 
 	private String name;
 	private String type;
 	private int goldValue;
 	private String damage;
-	
-	public Weapon(String name,String type, int goldValue,String damage) {
+
+	public Weapon(Integer id, String name, String type, int goldValue, String damage) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.goldValue = goldValue;
+		this.damage = damage;
+	}
+
+	public Weapon(String name, String type, int goldValue, String damage) {
 		super();
 		this.name = name;
 		this.type = type;
 		this.goldValue = goldValue;
 		this.damage = damage;
 	}
-	
-	
+
+	public Weapon() {
+		super();
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -52,12 +80,8 @@ public class Weapon {
 
 	@Override
 	public String toString() {
-		return "Weapon = " + name + ". It is a " + type + " Weapon."+ " It is worth " + goldValue + " Gold," + " This Weapon deals " + damage + ".";
+		return "Weapon = " + name + ". It is a " + type + " Weapon." + " It is worth " + goldValue + " Gold,"
+				+ " This Weapon deals " + damage + ".";
 	}
 
-	
-	
-	
-	
-	
 }

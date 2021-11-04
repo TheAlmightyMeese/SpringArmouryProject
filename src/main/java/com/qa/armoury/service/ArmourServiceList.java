@@ -3,12 +3,9 @@ package com.qa.armoury.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.qa.armoury.domain.Armour;
 
-@Service
-public class ArmourMethods implements ArmourService {
+public class ArmourServiceList implements ArmourService {
 
 	private List<Armour> armour = new ArrayList<>();
 

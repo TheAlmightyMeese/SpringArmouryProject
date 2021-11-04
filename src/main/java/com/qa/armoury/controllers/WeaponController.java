@@ -17,7 +17,7 @@ import com.qa.armoury.domain.Weapon;
 import com.qa.armoury.service.WeaponService;
 
 @RestController
-@RequestMapping("/Weapon")
+@RequestMapping("/weapon")
 public class WeaponController {
 
 	private WeaponService service;
